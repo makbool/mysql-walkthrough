@@ -1,0 +1,178 @@
+SQL
+
+Structured Query Language
+
+DBMS (Database Management System)
+
+RDBMS (Relational DBMS)
+
+Data is stored in Table maintaining the relation between them through columns
+
+EMPLOYEE - Table
+EMP_ID
+EMP_NAME
+GENDER
+
+
+100 KUMAR	MALE
+101 NAVEEN	MALE
+
+EMPLOYEE_SALARY - Table
+EMP_ID
+SALARY
+BONUS
+
+100 10000	3000
+101	15000	2000
+102	20000	4000
+
+
+Basic operations on database table
+			INSERT/CREATE
+			UPDATE
+			DELETE
+			SELECT/READ
+	
+CRUD
+	CREATE
+	READ
+	UPDATE
+	DELETE
+
+
+RDBMS
+--------
+Oracle
+MySQL
+SQLServer
+
+
+
+MySQL
+
+
+Amazon
+
+Products
+Sellers
+Consumers
+
+
+Schema	-> contains a set of tables
+
+
+----------------------------------------------------------------
+
+TABLE
+	COLUMNS
+		DATA is maintained in the columns
+		
+		
+		
+EMPLOYEE - TABLE
+
+COLUMNS - EMP_ID, EMP_NAME, GENDER, JOINING_DATE
+
+EMP_ID	EMP_NAME	GENDER	JOINING_DATE
+100		KUMAR		MALE	10-NOV-2019				ROW/RECORD
+101		SHANTI		FEMALE	13-NOV-2019
+
+Table has 2 ROWS
+
+
+COLUMN DATA TYPES
+	NUMBER/DECIMAL
+	STRING
+	DATE
+
+
+
+TABLE
+	NAME
+		COLUMN NAMES
+			DATA TYPES
+
+UNIQUE
+	EMP_ID		
+
+
+EMPLOYEE			EMP_ID 	UNIQUE + NOT_NULL	PRIMARY_KEY							PARENT TABLE
+EMPLOYEE_SALARY		EMP_ID	UNIQUE + NOT_NULL	PRIMARY_KEY 	FOREIGN KEY			CHILD TABLE
+
+
+----------------------------------------------------------------------------------------------------
+
+CREATE SCHEMA
+		EMP
+CREATE TABLE
+		TABLE_NAME	- EMPLOYEE
+		COLUMN_NAMES with DATA TYPES
+		EMP_ID - INT
+		EMP_NAME - STRING
+		JOINING_DATE - DATE
+	
+ORACLE
+	NUMBER
+	
+MySQL
+	INT
+
+
+Accessing tables from a particular schema
+schema.table
+
+Products Schema
+	ABC	Table
+	
+products.abc
+
+Sellers Schema
+	ABC Table
+
+sellers.abc
+
+
+TABLE CREATION
+
+CREATE TABLE <TABLE_NAME>
+(
+	<COLUMN_NAME> DATA_TYPE,
+	<COLUMN_NAME> DATA_TYPE,
+	..
+	..
+	<COLUMN_NAME> DATA_TYPE
+	
+)
+
+
+
+)
+INSERT INTO <TABLE_NAME> (COLUMN_NAME1, COLUMN_NAME2, ...) VALUES (COL1-VAL,, COL2-VAL);
+
+
+
+SELECT * FROM SCHEMA_NAME.TABLE_NAME;
+
+
+
+
+EMPLOYEE_SALARY
+--------------------------------------------QUERIES--------------------------------
+
+CREATE TABLE EMPLOYEE
+(
+	EMP_ID INT,
+    EMP_NAME TEXT,
+    JOINING_DATE DATE
+);
+
+INSERT INTO EMPLOYEE (EMP_ID, EMP_NAME, JOINING_DATE) VALUES (100, 'KUMAR', '2020-11-15');
+INSERT INTO EMPLOYEE (EMP_ID, EMP_NAME, JOINING_DATE) VALUES (101, 'SUNITA', '2020-11-17');
+
+SELECT EMP_ID, EMP_NAME from EMPLOYEE;
+
+
+-------------------------------------END of SESSION 1-------------------
+
+
+
